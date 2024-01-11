@@ -23,3 +23,16 @@ operations = {
     "*":multiply,
     "/":divide,
 }
+
+num1 = int(input("What is the first number: "))
+num2 = int(input("What is the second number: "))
+
+for key in operations:
+    print(f"{key} ")
+
+operation = input("Pick an operation from the list above: ")
+function = operations[operation]
+
+answer = function(num1, num2)
+
+print(f"{num1} {operation} {num2} = {answer}")
