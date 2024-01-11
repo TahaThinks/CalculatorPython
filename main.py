@@ -3,6 +3,7 @@
 def format_name(fname, lname):
     formated_fname = fname.title()
     formated_lname = lname.title()
-    print(f"{formated_fname} {formated_lname}")
+    return (f"{formated_fname} {formated_lname}")
 
-format_name("TAha", "HussEIN")
+formated_name = format_name("TAha", "HussEIN")
+print(formated_name)
