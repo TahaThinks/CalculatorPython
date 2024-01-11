@@ -16,6 +16,15 @@ def multiply(n1,n2):
 def divide(n1,n2):
     return n1/n2
 
+def calculator(firs_num , second_num):
+    for key in operations:
+        print(f"{key} ")
+    operation = input("Pick an operation from the list above: ")
+    function = operations[operation]
+    answer = function(firs_num, second_num)
+    print(f"{firs_num} {operation} {second_num} = {answer}")
+    return answer
+    
 
 operations = {
     "+":add,
@@ -24,15 +33,19 @@ operations = {
     "/":divide,
 }
 
-num1 = int(input("What is the first number: "))
-num2 = int(input("What is the second number: "))
+def main():
+    num1 = int(input("What is the first number: "))
+    anotherOperation = True
 
-for key in operations:
-    print(f"{key} ")
+    while anotherOperation:
+        num2 = int(input("What is the next number: "))
+        answer = calculator(num1, num2)
+        continue_calc = input(f"continue calculating with {answer}? y or n:  ")
+        if continue_calc == "y":
+            num1 = answer
+            continue
+        else:
+            anotherOperation = False
+            main()
 
-operation = input("Pick an operation from the list above: ")
-function = operations[operation]
-
-answer = function(num1, num2)
-
-print(f"{num1} {operation} {num2} = {answer}")
+main()
