@@ -1,5 +1,5 @@
 # Calculator
-
+from art import logo
 #Add
 def add(n1,n2):
     return n1+n2
@@ -34,6 +34,7 @@ operations = {
 }
 
 def main():
+    print(logo)
     num1 = int(input("What is the first number: "))
     anotherOperation = True
 
