@@ -1,29 +1,17 @@
-def is_leap(year):
-  if year % 4 == 0:
-    if year % 100 == 0:
-      if year % 400 == 0:
-        return("Leap year")
-      else:
-        return("Not leap year")
-    else:
-      return("Leap year")
-  else:
-    return("Not leap year")
-  
-# TODO: Add more code here 👇
-def days_in_month(year, month):
-    """Returns the number of days, even in Leap Year"""
-    month_days = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
-    isLeapYear = is_leap(year)
-    if isLeapYear == "Leap year":
-        month_days[1] = 29
-    return month_days[month-1]
-    
+# Calculator
 
+#Add
+def add(n1,n2):
+    return n1+n2
 
-  
-#🚨 Do NOT change any of the code below 
-year = int(input()) # Enter a year
-month = int(input()) # Enter a month
-days = days_in_month(year, month)
-print(days)
+#Subtract
+def subtract(n1,n2):
+    return n1-n2
+
+#Multiply
+def multiply(n1,n2):
+    return n1*n2
+
+#Divide
+def divide(n1,n2):
+    return n1/n2
