@@ -44,7 +44,6 @@ def main():
         continue_calc = input(f"continue calculating with {answer}? y or n:  ")
         if continue_calc == "y":
             num1 = answer
-            continue
         else:
             anotherOperation = False
             main()
